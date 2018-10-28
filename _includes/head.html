@@ -5,13 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128165441-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-128165441-1');
+</script>
+
+<script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
+
+
 <!-- CSS -->
+<link href="https://unpkg.com/ionicons@4.4.6/dist/css/ionicons.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="{{ site.baseurl }}/css/owl.carousel.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.min.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/css/airspace.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" />
-<link rel="stylesheet" href="{{ site.baseurl }}/css/ionicons.min.css" />
+
 <link rel="stylesheet" href="{{ site.baseurl }}/css/animate.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/css/responsive.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css" />
@@ -19,6 +36,7 @@
 <!-- Js -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/vendor/jquery.ihavecookies.min.js"></script>
 <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
 <script src="{{ site.baseurl }}/js/owl.carousel.min.js"></script>
 <script src="{{ site.baseurl }}/js/plugins.js"></script>
@@ -28,6 +46,39 @@
 
 <script src="{{ site.baseurl }}/js/main.js"></script>
 
+<script type="text/javascript">
+    var options = {
+        title: '&#x1F36A; Accept Cookies & Privacy Policy?',
+        message: 'There are no cookies used on this site, but if there were this message could be customised to provide more details. Click the <strong>accept</strong> button below to see the optional callback in action...',
+        delay: 600,
+        expires: 1,
+        link: '{{ site.baseurl }}/privacy',
+        onAccept: function(){
+            var myPreferences = $.fn.ihavecookies.cookie();
+            console.log('Yay! The following preferences were saved...');
+            console.log(myPreferences);
+        },
+        uncheckBoxes: true,
+        acceptBtnLabel: 'Accept Cookies',
+        moreInfoLabel: 'More information',
+        cookieTypesTitle: 'Select which cookies you want to accept',
+        fixedCookieTypeLabel: 'Essential',
+        fixedCookieTypeDesc: 'These are essential for the website to work correctly.'
+    }
+
+    $(document).ready(function() {
+        $('body').ihavecookies(options);
+
+        if ($.fn.ihavecookies.preference('marketing') === true) {
+            console.log('This should run because marketing is accepted.');
+        }
+
+        $('#ihavecookiesBtn').on('click', function(){
+            $('body').ihavecookies(options, 'reinit');
+        });
+    });
+
+    </script>
 <!--
 /*
  * Airspace

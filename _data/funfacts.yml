@@ -1,12 +1,9 @@
-- counter: 20000
+- counter: 100
   icon: ion-ios-chatboxes-outline
-  text: Cups of Coffee
-- counter: 1500
+  text: Supported OCR Languages out-of-the-box
+- counter: 80
   icon: ion-ios-glasses-outline
-  text: Gallons of Soft Drink
-- counter: 1200
+  text: Years of IT experience
+- counter: 25
   icon: ion-ios-compose-outline
-  text: Whiteboard Markers
-- counter: 300
-  icon: ion-ios-timer-outline
-  text: Websites built
+  text: Years of Document Capturing Experience
