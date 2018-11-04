@@ -71,11 +71,20 @@ permalink: /how-it-works/
            Many companies tried to move their traditional software into the cloud. Though, very few if any are successful. How does <strong>recoflo</strong>'s approach differ from this?
           </p>
           <p>
-            First and foremost <strong>recoflo</strong> has been designed from ground up to be a <strong>cloud-native</strong> application. A clould offers various features such as clustering of containers, auto-scaling and service-discovery. A traditional legacy software that may have it's roots in the 90s can't be retrofitted easily to make use of these features.
+            First and foremost <strong>recoflo</strong> has been designed from ground up to be a <strong>cloud-native</strong> application. A cloud offers various features such as clustering of containers, auto-scaling and service-discovery. A traditional legacy software that may have it's roots in the 90s can't be retrofitted easily to make use of these features.
           </p>
           <p>
             All <strong>recoflo</strong> components run in Docker containers as part of a cluster (Amazon ECS, Kubernetes) as a so-called container-service. Now we can put each container-service in a auto-scaling group. This means we can start more containers if the workload is high to fulfill the required SLAs.
             We also can stop containers on lower workloads to avoid unneccessary costs.
+          </p>
+          <p>
+            Legacy software that runs in the cloud has to make trade-offs when it comes to scalability.
+            Either the setup contains too few servers and the throughput slows is limited at peak loads.
+            Or the setup can cope with peak loads but has many machines idling on average or low workload which
+            increases the price/page unneccessarily.
+          </p>
+          <p>
+            Only a smart cloud-native solution like <strong>recoflo</strong> has a setup that utilizes the data center capacity in an optimal way. Not only can we provide a better service for any workload pattern but we can also offer this for a very attractive price.
           </p>
         </div>
       </div>
