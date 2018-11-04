@@ -22,21 +22,67 @@ permalink: /how-it-works/
 <section id="intro">
   <div class="container">
     <div class="row">
-      <div class="col-md-7 col-sm-12">
+      <div class="col-md-6 col-sm-12">
         <div class="block">
           
           <h2>What is Capturing as a Service?</h2>
           
-          <hr/>
           <p>
            Software as a service (SaaS) is a software licensing and delivery model in which software is licensed on a subscription basis and is centrally hosted. It is sometimes referred to as "on-demand software".
           </p>
           <p>
             <strong>recoflo</strong> provides document capturing (OCR, classification, extraction, archiving) as a SaaS or simply <strong>Capturing as a Service (CaaS)</strong>.
           </p>
+
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          
+          <img src="{{site.baseurl}}/img/caas_01.svg"/>
         </div>
       </div>
     </div>
+
+
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <div class="block">
+          <p>
+
+            <img width="200" src="{{site.baseurl}}/img/caas_02_low_load.svg"/><br/>
+            Low workload - few containers running
+          </p>
+
+          <p>
+
+            <img width="200" src="{{site.baseurl}}/img/caas_03_high_load.svg"/><br/>
+            High workload - more containers are started automatically
+
+        </div>
+      </div>
+
+      <div class="col-md-8 col-sm-12">
+        <div class="block">
+          
+          <h2>The importance of <strong>cloud-native</strong></h2>
+          
+          <p>
+           Many companies tried to move their traditional software into the cloud. Though, very few if any are successful. How does <strong>recoflo</strong>'s approach differ from this?
+          </p>
+          <p>
+            First and foremost <strong>recoflo</strong> has been designed from ground up to be a <strong>cloud-native</strong> application. A clould offers various features such as clustering of containers, auto-scaling and service-discovery. A traditional legacy software that may have it's roots in the 90s can't be retrofitted easily to make use of these features.
+          </p>
+          <p>
+            All <strong>recoflo</strong> components run in Docker containers as part of a cluster (Amazon ECS, Kubernetes) as a so-called container-service. Now we can put each container-service in a auto-scaling group. This means we can start more containers if the workload is high to fulfill the required SLAs.
+            We also can stop containers on lower workloads to avoid unneccessary costs.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+
+
   </div>
 </section>
 
