@@ -136,3 +136,12 @@ ul.front-page{
 .copyright {
   opacity: 0.5;
 }
+
+.footer-menu{
+  text-align: left;
+  min-height: 200px;
+}
+
+.footer-menu h3{
+  text-decoration: bold;
+}
