@@ -18,10 +18,11 @@ permalink: /blog/
 </section>
 {% for post in site.posts %}
 <div class="post-area">
-  <a href="{{ post.url | prepend: site.baseurl }}" class="bold">{{ post.title }}</a>
+  <h3><a href="{{ post.url | prepend: site.baseurl }}" class="bold">{{ post.title }}</a></h3>
   <p class="post-date">{{ post.date | date_to_long_string }}</p>
   <p>
     {{ post.content | strip_html | truncatewords: 50 }}
   </p>
+  <p><a href="{{ post.url | prepend: site.baseurl }}">Read the full article</a></p>
 </div>
 {% endfor %}

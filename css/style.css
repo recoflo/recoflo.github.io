@@ -24,13 +24,20 @@
   border-bottom: 1px dotted #ddd;
 }
 
+
 .post-area a:link, .post-area a:visited {
-  font-size: 30px;
   color: #333;
+  text-decoration: underline !important;
+  text-decoration-style: dotted !important;
 }
 
 .post-area a:hover {
   color: #0D0017;
+  text-decoration: none !important;
+}
+
+.post-area a.bold {
+  text-decoration: none !important;
 }
 
 /* Cookie Dialog */
@@ -124,4 +131,8 @@ ul.front-page{
   margin-left: 15px;
   color: #7B7B7B;
   line-height: 28px;
+}
+
+.copyright {
+  opacity: 0.5;
 }
