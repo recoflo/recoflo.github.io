@@ -46,7 +46,7 @@ permalink: /how-it-works/
 
 
     <div class="row">
-      <div class="col-md-4 col-sm-12">
+      <div class="col-md-3 col-sm-12">
         <div class="block">
           <p>
 
@@ -55,17 +55,23 @@ permalink: /how-it-works/
           </p>
 
           <p>
-
             <img width="200" src="{{site.baseurl}}/img/caas_03_high_load.svg"/><br/>
-            High workload - more containers are started automatically
+            Higher workload - more containers are started automatically
+          </p>
+
+          <p>
+            <img width="200" src="{{site.baseurl}}/img/caas_04_peak_load.svg"/><br/>
+            Peak workload - more containers and virtual machines are started
+          </p>
 
         </div>
       </div>
 
-      <div class="col-md-8 col-sm-12">
+      <div class="col-md-9 col-sm-12">
         <div class="block">
           
-          <h2>The importance of <strong>cloud-native</strong></h2>
+          <h2>The importance of <strong>cloud-native</strong> processing</h2>
+          
           
           <p>
            Many companies tried to move their traditional software into the cloud. Though, very few if any are successful. How does <strong>recoflo</strong>'s approach differ from this?
@@ -73,6 +79,10 @@ permalink: /how-it-works/
           <p>
             First and foremost <strong>recoflo</strong> has been designed from ground up to be a <strong>cloud-native</strong> application. A cloud offers various features such as clustering of containers, auto-scaling and service-discovery. A traditional legacy software that may have it's roots in the 90s can't be retrofitted easily to make use of these features.
           </p>
+          
+
+          <h4>Auto-scaling container services</h4>
+
           <p>
             All <strong>recoflo</strong> components run in Docker containers as part of a cluster (Amazon ECS, Kubernetes) as a so-called container-service. Now we can put each container-service in a auto-scaling group. This means we can start more containers if the workload is high to fulfill the required SLAs.
             We also can stop containers on lower workloads to avoid unneccessary costs.
@@ -86,6 +96,13 @@ permalink: /how-it-works/
           <p>
             Only a smart cloud-native solution like <strong>recoflo</strong> has a setup that utilizes the data center capacity in an optimal way. Not only can we provide a better service for any workload pattern but we can also offer this for a very attractive price.
           </p>
+
+          <h4>Automatic upgrades - zero downtimes</h4>
+          <p>
+            Another advantage of <strong>recoflo</strong>'s container-strategy is that we can do upgrades without
+            disrupting the business. While a service keeps processing with the previous version of your solution we will start new containers with the next version until eventually all containers run on the latest version. This happens without any downtime. We do this for each component individually - our core service, any out-of-the-box solution or a custom solution.
+          </p>
+
         </div>
       </div>
       
