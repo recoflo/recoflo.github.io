@@ -76,7 +76,7 @@ header .navbar-brand {
   padding-top: 5px;
 }
 header .navbar-default {
-  background: none;
+  background: #fff;
   border: 0px;
 }
 header .navbar-default .navbar-nav {
