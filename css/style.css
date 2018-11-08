@@ -194,8 +194,8 @@ ul.front-page{
 
     .navbar-fixed-top
     {
-    position: relative;
-    top: auto;
+      position: relative;
+      top: auto;
     }
 
     .navbar-custom {
@@ -217,6 +217,13 @@ ul.front-page{
     
     .navbar-custom ul {
       margin-right: 10px;
+    }
+
+    #global-header .block {
+  
+      margin: 0 auto;
+      padding-left: 0px;
+
     }
     
 }
