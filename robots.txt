@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://recoflo.com/sitemap.xml
