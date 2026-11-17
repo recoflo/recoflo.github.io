@@ -2,8 +2,14 @@
 
 The public website of Recoflo, in English (`/`) and German (`/de/`).
 
-Plain HTML and one stylesheet. There is no build, no JavaScript, no cookie
-and no request to another host: the fonts and the pictures are in `assets/`.
+Plain HTML and one stylesheet. There is no build, no cookie and no request
+to another host: the fonts and the pictures are in `assets/`.
+
+The only script is a few lines at the top of `index.html`: a visitor whose
+browser asks for German first, and who comes from outside the site, is sent
+to `/de/`. GitHub Pages cannot read the `Accept-Language` header, so the
+browser does it. It stores nothing; a visitor who chooses English on the
+site stays in English.
 
 ## Looking at it
 

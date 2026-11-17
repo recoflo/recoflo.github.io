@@ -17,6 +17,18 @@
   <link rel="preload" href="/assets/fonts/MonaSans-VF.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/HubotSans-VF.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/site.css">
+  <script>
+    // A visitor whose browser asks for German first, and who comes from
+    // outside the site, is sent to the German home. Whoever chooses English
+    // on the site comes from the site itself and stays. Nothing is stored.
+    (function () {
+      try {
+        var first = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase();
+        var fromHere = document.referrer.indexOf(location.origin + "/") === 0;
+        if (first.indexOf("de") === 0 && !fromHere) location.replace("/de/");
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to the content</a>
